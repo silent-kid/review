@@ -1,33 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+:root{
+  background: linear-gradient(#e66465, #9198e5);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+}
+
+.rating {
+  background: rgb(255, 255, 255);
+  border: 4px solid rgb(255, 255, 255);
+  box-shadow: 0px 0px 15px black;
+  border-radius: 10px;
+  padding: 10px;
+  height: fit-content;
+  width:fit-content;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  margin: -50px 0 0 -50px;
+}
+
+h3{
+  color: #2c6804;
+  font-weight: 500;
+  font-size: 25px;
+  display: inline-block;
+  width: 100%;
+}
+
+.selected{
+  color: rgb(233, 193, 17);
+  cursor: pointer;
+}
+
+.stars{
+  /* background: rgb(216, 216, 216); */
+  cursor: pointer;
+  border-radius: 50px;
+  font-size: x-large;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  /* padding: 5px; */
+}
+
+.left{
+  margin-left: 2%;
+}
+
+hr{
+  margin-bottom: 10px;
+}
+
+.thumb{
+  color: black;
+}
+
+
+p{
+  color: rgb(136, 130, 130);
+  font-size: small;
+}
+h2{
+  color:rgb(5, 71, 16);
+  font-size: xx-large;
+  font-weight: 500;
+}
+
+hr{
+  border: 2px solid rgb(126, 103, 2);
+  border-radius: 2px;
+}
+
+
+.material-symbols-outlined {
+  font-size: x-large;
+  cursor: pointer;
+  margin:0px 0px 0px 5px;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.cross{
+font-size: 30px;
+position: absolute;
+align-self: right;
+right: 6px;
+top: -1px;
+/* padding-right: 20px; */
+/* margin-bottom: 80px; */
+border-radius: 80%;
+height: fit-content;
+width: 40px;
+}
+
+.cross:hover{
+  z-index: 2;
+  opacity:0.7;
+  background-color: gray;
+}
+.submit{
+  color: rgb(32, 35, 37);
+  font-size: 25px;
+  font-weight: 700;
+  width:100%;
+  background-color: #9198e5;
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+}
+
+.submit:hover{
+  background-color: #2f3bbe;
+  color: white;
+}
+
+@media (max-width:630px) {
+  .rating {
+    background: rgb(255, 255, 255);
+    border: 4px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 15px black;
+    border-radius: 10px;
+    padding: 10px;
+    height: 380px;
+    width:300px;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    margin: -50px 0 0 -50px;
   }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  h3{
+    font-size: smaller;
+    display: block;
+  }
+  
+  h2{
+    font-size: 20px;
+    display: inline-block;
+  }
+  
+  p{
+    font-size: xx-small;
+    display: block;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .stars{
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+
+  .submit{
+    font-size: smaller;
+  }
+  .submit:hover{
+    font-size: smaller;
+    background-color: #2f3bbe;
+    color: white;
+  }
+
+  .cross{
+    font-size: 25px;
+    right: 1%;
+  }
+
+  hr{
+    border: 1px solid rgb(126, 103, 2);
+    border-radius: 2px;
   }
 }
